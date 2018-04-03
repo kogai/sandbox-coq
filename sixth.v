@@ -22,3 +22,11 @@ Proof.
         apply not_eq_S.
         apply H.
 Qed.
+
+Goal forall (P Q : nat -> Prop),
+  (forall n, P n -> Q n) -> ((forall n, P n) -> (forall n, Q n)).
+Proof.
+  intros.
+  apply H.
+  apply H0.
+Qed.
